@@ -22,15 +22,13 @@ This PicoC program runs directly on your Loxone Miniserver and:
 ![Loxone Config Diagram](loxone-config-diagram.svg)
 ![Loxone Config](loxone-config.png)
 
-## Installation
+## Installation (or use **Loxone connect example.Loxone** file)
 
 1. Open **Loxone Config**
 2. Create a new **PicoC Program Block**
 3. Copy the code from `lxc.c` into the program block
 4. Configure your inputs and outputs
 5. Save and deploy to Miniserver
-
-![Loxone Config file](Loxone connect example.Loxone)
 
 ## Configuration
 
