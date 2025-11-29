@@ -30,6 +30,8 @@ This PicoC program runs directly on your Loxone Miniserver and:
 4. Configure your inputs and outputs
 5. Save and deploy to Miniserver
 
+![Loxone Config file](Loxone connect example.Loxone)
+
 ## Configuration
 
 ### Inputs
@@ -66,10 +68,10 @@ For the cleanest configuration, use a **Text Generator** block:
 
 | Text Generator | Value | Connects to |
 |----------------|-------|-------------|
-| Txt1 | Server IP:PORT (or empty for default) | T1 |
-| Txt2 | /api/endpoint | T2 |
-| Txt3 | xml_tag_name | T3 |
-| Txt4 | 1 | I1 (trigger) |
+| Txt  | Server IP:PORT (or empty for default) | T1 |
+| Txt1 | /api/endpoint | T2 |
+| Txt2 | xml_tag_name | T3 |
+| Txt3 | 1 | I1 (trigger) |
 
 This approach:
 - Keeps all configuration in one place
