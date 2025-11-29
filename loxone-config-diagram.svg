@@ -48,19 +48,19 @@
     <line x1="10" y1="35" x2="190" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
     
     <!-- Input rows -->
-    <text x="15" y="55" font-family="monospace" font-size="10" fill="white">Txt1:</text>
+    <text x="15" y="55" font-family="monospace" font-size="10" fill="white">Txt:</text>
     <rect x="50" y="43" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
     <text x="55" y="55" font-family="monospace" font-size="10" fill="white">SERVER_IP:PORT</text>
     
-    <text x="15" y="77" font-family="monospace" font-size="10" fill="white">Txt2:</text>
+    <text x="15" y="77" font-family="monospace" font-size="10" fill="white">Txt1:</text>
     <rect x="50" y="65" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
     <text x="55" y="77" font-family="monospace" font-size="10" fill="white">/api/endpoint</text>
     
-    <text x="15" y="99" font-family="monospace" font-size="10" fill="white">Txt3:</text>
+    <text x="15" y="99" font-family="monospace" font-size="10" fill="white">Txt2:</text>
     <rect x="50" y="87" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
     <text x="55" y="99" font-family="monospace" font-size="10" fill="white">xml_tag_name</text>
     
-    <text x="15" y="121" font-family="monospace" font-size="10" fill="white">Txt4:</text>
+    <text x="15" y="121" font-family="monospace" font-size="10" fill="white">Txt3:</text>
     <rect x="50" y="109" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
     <text x="55" y="121" font-family="monospace" font-size="10" fill="white">1 (start flag)</text>
   </g>
