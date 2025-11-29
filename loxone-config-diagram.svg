@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6abf69"/>
+      <stop offset="100%" style="stop-color:#4a9f49"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a56"/>
+      <stop offset="100%" style="stop-color:#e07830"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b9bd5"/>
+      <stop offset="100%" style="stop-color:#3a7bb5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">Loxone Connect (LXC) - Configuration Diagram</text>
+  
+  <!-- TRIGGER Section -->
+  <g transform="translate(50, 80)">
+    <rect width="140" height="100" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <text x="70" y="25" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">TRIGGER</text>
+    <line x1="10" y1="35" x2="130" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <text x="70" y="55" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">Push Button</text>
+    <text x="70" y="70" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">or Virtual Input</text>
+    <text x="70" y="90" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">(activates program)</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 195 130 L 240 130" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- TEXT GENERATOR Section -->
+  <g transform="translate(250, 60)">
+    <rect width="200" height="140" rx="8" fill="url(#greenGrad)" filter="url(#shadow)"/>
+    <text x="100" y="25" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">TEXT GENERATOR</text>
+    <line x1="10" y1="35" x2="190" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    
+    <!-- Input rows -->
+    <text x="15" y="55" font-family="monospace" font-size="10" fill="white">Txt1:</text>
+    <rect x="50" y="43" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="55" y="55" font-family="monospace" font-size="10" fill="white">SERVER_IP:PORT</text>
+    
+    <text x="15" y="77" font-family="monospace" font-size="10" fill="white">Txt2:</text>
+    <rect x="50" y="65" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="55" y="77" font-family="monospace" font-size="10" fill="white">/api/endpoint</text>
+    
+    <text x="15" y="99" font-family="monospace" font-size="10" fill="white">Txt3:</text>
+    <rect x="50" y="87" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="55" y="99" font-family="monospace" font-size="10" fill="white">xml_tag_name</text>
+    
+    <text x="15" y="121" font-family="monospace" font-size="10" fill="white">Txt4:</text>
+    <rect x="50" y="109" width="140" height="16" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="55" y="121" font-family="monospace" font-size="10" fill="white">1 (start flag)</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 455 130 L 500 130" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- LXC PICOC Section -->
+  <g transform="translate(510, 60)">
+    <rect width="180" height="140" rx="8" fill="url(#orangeGrad)" filter="url(#shadow)"/>
+    <text x="90" y="25" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">LXC - PicoC Program</text>
+    <line x1="10" y1="35" x2="170" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    
+    <!-- Inputs -->
+    <text x="15" y="55" font-family="monospace" font-size="10" fill="white">T1 ← Server</text>
+    <text x="15" y="72" font-family="monospace" font-size="10" fill="white">T2 ← Endpoint</text>
+    <text x="15" y="89" font-family="monospace" font-size="10" fill="white">T3 ← XML Tag</text>
+    <text x="15" y="106" font-family="monospace" font-size="10" fill="white">I1 ← Start</text>
+    
+    <line x1="10" y1="115" x2="170" y2="115" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    
+    <!-- Output -->
+    <text x="15" y="133" font-family="monospace" font-size="10" fill="white">TQ1 → Result Text</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <path d="M 695 130 L 740 130" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- STATUS Section -->
+  <g transform="translate(750, 80)">
+    <rect width="120" height="100" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">STATUS</text>
+    <line x1="10" y1="35" x2="110" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">Display Block</text>
+    <text x="60" y="72" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">or State Block</text>
+    <text x="60" y="92" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">(shows result)</text>
+  </g>
+  
+  <!-- Data Flow Diagram -->
+  <g transform="translate(50, 260)">
+    <rect width="800" height="200" rx="8" fill="white" stroke="#ddd" stroke-width="1" filter="url(#shadow)"/>
+    <text x="400" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Data Flow</text>
+    <line x1="20" y1="35" x2="780" y2="35" stroke="#eee" stroke-width="1"/>
+    
+    <!-- External Server -->
+    <rect x="30" y="70" width="120" height="80" rx="5" fill="#f0f0f0" stroke="#ccc"/>
+    <text x="90" y="100" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">External</text>
+    <text x="90" y="115" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Server</text>
+    <text x="90" y="135" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">(XML API)</text>
+    
+    <!-- Arrow -->
+    <path d="M 155 110 L 220 110" stroke="#4a9f49" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+    <text x="187" y="100" font-family="Arial, sans-serif" font-size="9" fill="#4a9f49" text-anchor="middle">HTTP GET</text>
+    <defs>
+      <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#4a9f49"/>
+      </marker>
+    </defs>
+    
+    <!-- Loxone Miniserver -->
+    <rect x="225" y="55" width="150" height="110" rx="5" fill="url(#orangeGrad)"/>
+    <text x="300" y="80" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Loxone Miniserver</text>
+    <line x1="235" y1="88" x2="365" y2="88" stroke="rgba(255,255,255,0.3)"/>
+    <text x="300" y="108" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">PicoC Program</text>
+    <text x="300" y="123" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">parses XML</text>
+    <text x="300" y="138" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">extracts string</text>
+    <text x="300" y="153" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">→ Text Output</text>
+    
+    <!-- Arrow to App -->
+    <path d="M 380 110 L 445 110" stroke="#5b9bd5" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+    <text x="412" y="100" font-family="Arial, sans-serif" font-size="9" fill="#5b9bd5" text-anchor="middle">Text</text>
+    <defs>
+      <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#5b9bd5"/>
+      </marker>
+    </defs>
+    
+    <!-- Loxone App -->
+    <rect x="450" y="70" width="100" height="80" rx="5" fill="url(#blueGrad)"/>
+    <text x="500" y="100" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">Loxone</text>
+    <text x="500" y="115" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">App</text>
+    <text x="500" y="135" font-family="Arial, sans-serif" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="middle">(visualization)</text>
+    
+    <!-- Legend -->
+    <g transform="translate(600, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Example:</text>
+      <text x="0" y="20" font-family="monospace" font-size="9" fill="#666">Server: 192.168.1.100:8080</text>
+      <text x="0" y="35" font-family="monospace" font-size="9" fill="#666">Endpoint: /api/calendar/today</text>
+      <text x="0" y="50" font-family="monospace" font-size="9" fill="#666">XML Tag: event_name</text>
+      <line x1="0" y1="60" x2="160" y2="60" stroke="#eee"/>
+      <text x="0" y="75" font-family="monospace" font-size="9" fill="#4a9f49">Result: "Meeting at 10:00"</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="485" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">LXC v1.3 - github.com/YOUR_USERNAME/loxone-connect</text>
+</svg>
