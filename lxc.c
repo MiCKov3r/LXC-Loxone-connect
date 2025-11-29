@@ -1,15 +1,27 @@
-// LXC - Loxone connect v1.2
+// LXC - Loxone Connect v1.3
+// Get string values into Loxone Miniserver via HTTP/XML
+
+char* t1;
 char* t2;
 char* t3;
 char* val;
 char* ret;
+char* server;
 
 while(1) {
     if(getinput(0) > 0) {
+        t1 = getinputtext(0);
         t2 = getinputtext(1);
         t3 = getinputtext(2);
         
-        val = httpget("YOUR_SERVER_IP:PORT", t2);
+        // Use custom server if provided, otherwise use default
+        if(strlen(t1) > 0) {
+            server = t1;
+        } else {
+            server = "185.227.171.228:11881";
+        }
+        
+        val = httpget(server, t2);
         
         if(val != NULL) {
             ret = getxmlvalue(val, 0, t3);
@@ -25,6 +37,7 @@ while(1) {
             setoutputtext(0, "HTTP error");
         }
         
+        free(t1);
         free(t2);
         free(t3);
     } else {
