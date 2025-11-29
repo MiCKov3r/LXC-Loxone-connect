@@ -19,6 +19,8 @@ This PicoC program runs directly on your Loxone Miniserver and:
 3. Extracts string values
 4. Makes them available as text outputs in Loxone Config
 
+![Loxone Config Diagram](loxone-config-diagram.svg)
+
 ## Installation
 
 1. Open **Loxone Config**
@@ -34,8 +36,9 @@ This PicoC program runs directly on your Loxone Miniserver and:
 | Input | Type | Description |
 |-------|------|-------------|
 | AI 1 | Analog | Trigger (value > 0 activates the program) |
-| TI 1 | Text | HTTP endpoint path/command |
-| TI 2 | Text | XML tag name to extract |
+| TI 1 | Text | Server address (optional - uses default if empty) |
+| TI 2 | Text | HTTP endpoint path/command |
+| TI 3 | Text | XML tag name to extract |
 
 ### Outputs
 
@@ -45,11 +48,32 @@ This PicoC program runs directly on your Loxone Miniserver and:
 
 ### Server Configuration
 
-The server address is hardcoded in the program. Modify this line to point to your data source:
+You can configure the server in two ways:
+
+1. **Via TI 1 input** — Set server address dynamically (e.g., `192.168.1.100:8080`)
+2. **Default fallback** — If TI 1 is empty, uses the hardcoded default in the code
+
+To change the default server, modify this line:
 
 ```c
 val = httpget("YOUR_SERVER_IP:PORT", t2);
 ```
+
+## Recommended Loxone Config Setup
+
+For the cleanest configuration, use a **Text Generator** block:
+
+| Text Generator | Value | Connects to |
+|----------------|-------|-------------|
+| Txt1 | Server IP:PORT (or empty for default) | T1 |
+| Txt2 | /api/endpoint | T2 |
+| Txt3 | xml_tag_name | T3 |
+| Txt4 | 1 | I1 (trigger) |
+
+This approach:
+- Keeps all configuration in one place
+- Easy to switch between different API endpoints
+- No need for multiple Memory blocks
 
 ## How It Works
 
