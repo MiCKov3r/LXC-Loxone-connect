@@ -36,10 +36,10 @@ This PicoC program runs directly on your Loxone Miniserver and:
 
 | Input | Type | Description |
 |-------|------|-------------|
-| AI 1 | Analog | Trigger (value > 0 activates the program) |
-| TI 1 | Text | Server address (optional - uses default if empty) |
-| TI 2 | Text | HTTP endpoint path/command |
-| TI 3 | Text | XML tag name to extract |
+| I1 | Analog | Trigger (value > 0 activates the program) |
+| T1 | Text | Server address (optional - uses default if empty) |
+| T2 | Text | HTTP endpoint path/command |
+| T3 | Text | XML tag name to extract |
 
 ### Outputs
 
