@@ -18,7 +18,7 @@ while(1) {
         if(strlen(t1) > 0) {
             server = t1;
         } else {
-            server = "185.227.171.228:11881";
+            server = "YOUR_SERVER_IP:PORT";
         }
         
         val = httpget(server, t2);
