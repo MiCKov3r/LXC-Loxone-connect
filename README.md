@@ -100,10 +100,6 @@ Default polling interval is **1000ms** (1 second). Adjust the `sleep()` value to
 
 Pull requests welcome! Please open an issue first to discuss proposed changes.
 
-## Author
-
-Created to solve a real limitation in Loxone smart home systems.
-
 ---
 
 **Note**: This is an unofficial community project and is not affiliated with Loxone Electronics GmbH.
