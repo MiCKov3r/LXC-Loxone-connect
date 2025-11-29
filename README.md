@@ -119,7 +119,7 @@ The program includes built-in error handling:
 
 ## Polling Interval
 
-Default polling interval is **1000ms** (1 second). Adjust the `sleep()` value to change:
+Default polling interval is **1000ms** (1 second). Adjust the `sleep()` value to change.
 
 ## Contributing
 
