@@ -20,6 +20,7 @@ This PicoC program runs directly on your Loxone Miniserver and:
 4. Makes them available as text outputs in Loxone Config
 
 ![Loxone Config Diagram](loxone-config-diagram.svg)
+![Loxone Config](loxone-config.png)
 
 ## Installation
 
